@@ -63,6 +63,9 @@
     margin-bottom: 0;
   }
 
+  #about{
+    margin-top : 50px; 
+  }
   footer nav {
     height: fit-content;
     margin-bottom: 2rem;
