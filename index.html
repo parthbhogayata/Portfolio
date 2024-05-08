@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parth Bhogayata | Software Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaquery.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Parth Bhogayata</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#profile">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contacts</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Parth Bhogayata</div>
+      <div class="hamgurger-menu">
+        <div class="hamburger-icon" onclick="togglemenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <ul>
+            <li><a href="#about" onclick="togglemenu()">About</a></li>
+            <li><a href="#expireance" onclick="togglemenu()">Expireance</a></li>
+            <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
+            <li><a href="#contact" onclick="togglemenu()">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="assets/profile.jpg"
+          alt="Parth Bhogayata Profile Picture"
+          class="profile-pic" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello I'm</p>
+        <h1 class="title">Parth Bhogayata</h1>
+        <p class="section__text__p2">Software Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('assets/Parth_Bhogayata_Resume.pdf')">
+            Download CV
+          </button>
+
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="social-container">
+          <img
+            src="assets/linkedin.png"
+            alt="Linked In Account"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/parth-b-b582b2213/'" />
+
+          <img
+            src="assets/github.png"
+            alt="GitHub Account"
+            class="icon"
+            onclick="location.href='https://github.com/parthbhogayata'" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="assets/aboutme.png" alt="About Me PNG" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h3>Experiance</h3>
+              <p>
+                4 Month Internship <br />
+                Python Programming
+              </p>
+            </div>
+            <div class="details-container">
+              <h3>Education</h3>
+              <p>
+                Master's in Computer Application (Pursuing) <br />
+                <br />
+                Bachelor's in Computer Application
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hello Viewer's I'm Parth Bhogayata <br />
+              Student of Master's in Computer Application in Marwadi University
+              - Rajkot <br />
+              I have Completed My Bachelor's in Computer Application (BCA) With
+              9.18 CGPA <br />
+              I Have done one Internship in Python Programming language in
+              Heliconia Solution Pvt. Ltd. in the Time Duration of April - 2023
+              to July - 2023 <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="assets/email.png"
+            alt="Email Icon"
+            class="icon contact-icon email-icon" />
+          <p>
+            <a href="mailto:bhogayataparth@gmail.com"
+              >bhogayataparth@gmail.com</a
+            >
+          </p>
+        </div>
+
+        <div class="contact-info-container">
+          <img
+            src="assets/linkedin.png"
+            alt="Linkedin Icon"
+            class="icon contact-icon" />
+          <p>
+            <a href="https://www.linkedin.com/in/parth-b-b582b2213/"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#profile">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
