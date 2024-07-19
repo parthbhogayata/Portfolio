@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Parth B.</title>
+    <link rel="shortcut icon" href="assets/title_bar.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaquery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <div class="user">
+        <img src="assets/main.jpg" alt="---" />
+        <h3 class="name">Parth Bhogayata</h3>
+        <p class="post">Full Stack Developer</p>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#connect">Connect With Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <h3>Hi 👋 There !</h3>
+      <h1>I am <span>Parth Bhogayata</span></h1>
+      <p>
+        I am a student pursuing a Master's in Computer Applications. I am
+        passionate about programming and eager to make significant contributions
+        in the tech field. I have knowledge of frontend technologies such as
+        HTML, CSS, and the Bootstrap framework, as well as basics of backend
+        development using the Django framework. Additionally, I am familiar with
+        MySQL databases. I maintain a continuous learning approach to identify
+        and enhance my skills.
+      </p>
+      <a href="#about"
+        ><button class="btn">About Me <i class="fas fa-user"></i></button
+      ></a>
+    </section>
+
+    <section class="about" id="about">
+      <h1 class="heading"><span>About</span> Me</h1>
+      <div class="row">
+        <div class="info">
+          <h3><span>Name : </span>Bhogayata Parth</h3>
+          <h3><span>Qualification : </span>MCA (Pursuing)</h3>
+          <h3><span>Post : </span>Full Stack Developer</h3>
+          <a href="assets/Parth_Bhogayata_Resume.pdf" download
+            ><button class="btn">
+              Download Resume <i class="fas fa-download"></i></button
+          ></a>
+        </div>
+
+        <div class="counter">
+          <div class="box">
+            <span>6 Months</span>
+            <h3>Internship Completed</h3>
+            <h3>Python Intern</h3>
+            <h3>Helicconia Solution Pvt. Ltd.</h3>
+          </div>
+
+          <div class="box">
+            <span>Technical</span>
+            <h3>Java Programing</h3>
+            <h3>Python Programing</h3>
+            <h3>Django Framework</h3>
+          </div>
+
+          <div class="box">
+            <span>Soft Skills</span>
+            <h3>Problem Solving</h3>
+            <h3>Communication</h3>
+            <h3>Team Work</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education" id="education">
+      <h1 class="heading">My <span>Education</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-laptop-code"></i>
+          <span>2025</span>
+          <h3>Master's in Computer Application</h3>
+          <p>
+            Currently, I am student of MCA at Marwadi University and my current
+            CGPA was 9.12 (1st Year)
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2023</span>
+          <h3>Bachelor's in Computer Application</h3>
+          <p>
+            I have done my graduation with BCA degree in Atmiya University -
+            Rajkot, with 9.18 CGPA
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-school"></i>
+          <span>2020</span>
+          <h3>12th Commerce - GSHSEB</h3>
+          <p>
+            Complete 12th from GSHSEB (Shree K.G. Dholakiya School - Rajkot)
+            with 95.86 percentile.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="connect" id="connect">
+      <h1 class="heading"><span>Connect</span> with Me</h1>
+      <div class="row">
+        <div class="content">
+          <h3 class="title">Contact Info</h3>
+          <div class="info">
+            <h3><i class="fas fa-envelope"></i>bhogayataparth@gmail.com</h3>
+            <h3>
+              <i class="fas fa-map-marker-alt"></i>Rajkot , Gujrat , India.
+            </h3>
+            <div class="social">
+              <a href="https://github.com/parthbhogayata" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/parth-b-b582b2213/"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <form action="mailto:bhogayataparth@gmail.com">
+          <input type="text" placeholder="Name" class="box" />
+          <input type="email" placeholder="Email" class="box" />
+          <input type="text" placeholder="Project" class="box" />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="box message"
+            placeholder="message"></textarea>
+          <button type="submit" class="btn">
+            Send <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script src="Script.js"></script>
+  </body>
+</html>
