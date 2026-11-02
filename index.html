@@ -1,177 +1,592 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Parth B.</title>
-    <link rel="shortcut icon" href="assets/title_bar.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaquery.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <header>
-      <div class="user">
-        <img src="assets/main.jpg" alt="---" />
-        <h3 class="name">Parth Bhogayata</h3>
-        <p class="post">Full Stack Developer</p>
-      </div>
+    <meta
+      name="description"
+      content="Portfolio of Parth Bhogayata, a Full Stack Software Developer building production web applications with React, Node.js, NestJS, and PostgreSQL."
+    />
+    <meta name="author" content="Parth Bhogayata" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Parth Bhogayata | Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full Stack Software Developer focused on secure, scalable, and thoughtful web products."
+    />
+    <meta property="og:image" content="assets/profile_picture.png" />
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#connect">Connect With Me</a></li>
-        </ul>
+    <title>Parth Bhogayata | Full Stack Developer</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <script>
+      (function () {
+        try {
+          var savedTheme = localStorage.getItem("parth-portfolio-theme");
+          var preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+          document.documentElement.dataset.theme = savedTheme || preferredTheme;
+        } catch (error) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Parth Bhogayata",
+        "jobTitle": "Full Stack Software Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "eSparkBiz Technologies Pvt. Ltd."
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ahmedabad",
+          "addressRegion": "Gujarat",
+          "addressCountry": "IN"
+        },
+        "email": "mailto:bhogayataparth@gmail.com",
+        "sameAs": [
+          "https://github.com/parthbhogayata",
+          "https://www.linkedin.com/in/parth--bhogayata"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Parth Bhogayata, home">
+          <span class="brand-mark" aria-hidden="true">PB</span>
+          <span class="brand-copy">
+            <strong>Parth Bhogayata</strong>
+            <small>Full Stack Developer</small>
+          </span>
+        </a>
+
+        <div class="nav-links" id="primary-navigation">
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <button
+            class="icon-button theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Switch to dark theme"
+            title="Switch theme"
+          >
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
+          </button>
+
+          <a
+            class="button button-small nav-resume"
+            href="assets/Parth%20Bhogayata%20-%20Resume%20(ATS%20Optimized)(1)%20(1).pdf"
+            download="Parth_Bhogayata_Resume.pdf"
+          >
+            Resume
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path>
+            </svg>
+          </a>
+
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <div id="menu" class="fas fa-bars"></div>
+    <main id="main-content">
+      <section class="hero section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow reveal">
+              <span class="status-dot" aria-hidden="true"></span>
+              Full Stack Software Developer · Ahmedabad, India
+            </p>
 
-    <!-- Home Section -->
-    <section class="home" id="home">
-      <h3>Hi 👋 There !</h3>
-      <h1>I am <span>Parth Bhogayata</span></h1>
-      <p>
-        I am a student pursuing a Master's in Computer Applications. I am
-        passionate about programming and eager to make significant contributions
-        in the tech field. I have knowledge of frontend technologies such as
-        HTML, CSS, and the Bootstrap framework, as well as basics of backend
-        development using the Django framework. Additionally, I am familiar with
-        MySQL databases. I maintain a continuous learning approach to identify
-        and enhance my skills.
-      </p>
-      <a href="#about"
-        ><button class="btn">About Me <i class="fas fa-user"></i></button
-      ></a>
-    </section>
+            <h1 class="reveal reveal-delay-one">
+              I build dependable web products from
+              <span>interface to API.</span>
+            </h1>
 
-    <section class="about" id="about">
-      <h1 class="heading"><span>About</span> Me</h1>
-      <div class="row">
-        <div class="info">
-          <h3><span>Name : </span>Bhogayata Parth</h3>
-          <h3><span>Qualification : </span>MCA (Pursuing)</h3>
-          <h3><span>Post : </span>Full Stack Developer</h3>
-          <a href="assets/Parth_Bhogayata_Resume.pdf" download
-            ><button class="btn">
-              Download Resume <i class="fas fa-download"></i></button
-          ></a>
-        </div>
+            <p class="hero-intro reveal reveal-delay-two">
+              I’m Parth, a full stack developer at eSparkBiz Technologies. I build
+              production applications with React, Node.js, NestJS, and PostgreSQL—turning
+              complex workflows into secure, responsive product experiences.
+            </p>
 
-        <div class="counter">
-          <div class="box">
-            <span>6 Months</span>
-            <h3>Internship Completed</h3>
-            <h3>Python Intern</h3>
-            <h3>Helicconia Solution Pvt. Ltd.</h3>
-          </div>
-
-          <div class="box">
-            <span>Technical</span>
-            <h3>Java Programing</h3>
-            <h3>Python Programing</h3>
-            <h3>Django Framework</h3>
-          </div>
-
-          <div class="box">
-            <span>Soft Skills</span>
-            <h3>Problem Solving</h3>
-            <h3>Communication</h3>
-            <h3>Team Work</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="education" id="education">
-      <h1 class="heading">My <span>Education</span></h1>
-
-      <div class="box-container">
-        <div class="box">
-          <i class="fas fa-laptop-code"></i>
-          <span>2025</span>
-          <h3>Master's in Computer Application</h3>
-          <p>
-            Currently, I am student of MCA at Marwadi University and my current
-            CGPA was 9.12 (1st Year)
-          </p>
-        </div>
-
-        <div class="box">
-          <i class="fas fa-graduation-cap"></i>
-          <span>2023</span>
-          <h3>Bachelor's in Computer Application</h3>
-          <p>
-            I have done my graduation with BCA degree in Atmiya University -
-            Rajkot, with 9.18 CGPA
-          </p>
-        </div>
-
-        <div class="box">
-          <i class="fas fa-school"></i>
-          <span>2020</span>
-          <h3>12th Commerce - GSHSEB</h3>
-          <p>
-            Complete 12th from GSHSEB (Shree K.G. Dholakiya School - Rajkot)
-            with 95.86 percentile.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="connect" id="connect">
-      <h1 class="heading"><span>Connect</span> with Me</h1>
-      <div class="row">
-        <div class="content">
-          <h3 class="title">Contact Info</h3>
-          <div class="info">
-            <h3><i class="fas fa-envelope"></i>bhogayataparth@gmail.com</h3>
-            <h3>
-              <i class="fas fa-map-marker-alt"></i>Rajkot , Gujrat , India.
-            </h3>
-            <div class="social">
-              <a href="https://github.com/parthbhogayata" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
+            <div class="hero-actions reveal reveal-delay-three">
+              <a class="button button-primary" href="#work">
+                Explore my work
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M14 7l5 5-5 5"></path>
+                </svg>
+              </a>
               <a
-                href="https://www.linkedin.com/in/parth-b-b582b2213/"
+                class="button button-secondary"
+                href="assets/Parth%20Bhogayata%20-%20Resume%20(ATS%20Optimized)(1)%20(1).pdf"
                 target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+                rel="noopener noreferrer"
+              >
+                View resume
+              </a>
+            </div>
+
+            <div class="hero-socials reveal reveal-delay-three" aria-label="Social profiles">
+              <a href="https://github.com/parthbhogayata" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.28-.36 6.72-1.61 6.72-7.25A5.65 5.65 0 0 0 19.22 3.3 5.3 5.3 0 0 0 19.08.3S17.9-.08 15 1.8a13.4 13.4 0 0 0-7 0C5.1-.08 3.92.3 3.92.3a5.3 5.3 0 0 0-.14 3A5.65 5.65 0 0 0 2.28 7.3c0 5.62 3.44 6.87 6.72 7.25A4.8 4.8 0 0 0 8 18v4"></path>
+                  <path d="M8 19c-3 .92-3-1.5-4-2"></path>
+                </svg>
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/parth--bhogayata" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"></path>
+                  <path d="M2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                LinkedIn
+              </a>
+              <a href="mailto:bhogayataparth@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="m3 7 9 6 9-6"></path>
+                </svg>
+                Email
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal reveal-delay-two">
+            <div class="portrait-shell">
+              <div class="portrait-grid" aria-hidden="true"></div>
+              <img
+                src="assets/profile_picture.png"
+                alt="Parth Bhogayata wearing a navy suit"
+                width="1254"
+                height="1254"
+                fetchpriority="high"
+              />
+              <div class="floating-card current-card">
+                <span class="floating-label">Currently building</span>
+                <strong>CRM &amp; DevOps platforms</strong>
+              </div>
+              <div class="floating-card stack-card" aria-label="Primary technology stack">
+                <span>React</span>
+                <i aria-hidden="true"></i>
+                <span>Node.js</span>
+                <i aria-hidden="true"></i>
+                <span>PostgreSQL</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <form action="mailto:bhogayataparth@gmail.com">
-          <input type="text" placeholder="Name" class="box" />
-          <input type="email" placeholder="Email" class="box" />
-          <input type="text" placeholder="Project" class="box" />
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            class="box message"
-            placeholder="message"></textarea>
-          <button type="submit" class="btn">
-            Send <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-    </section>
+        <div class="container proof-strip reveal">
+          <div>
+            <strong>Jan 2025</strong>
+            <span>Building at eSparkBiz</span>
+          </div>
+          <div>
+            <strong>2</strong>
+            <span>Production platforms</span>
+          </div>
+          <div>
+            <strong>Full stack</strong>
+            <span>Frontend, APIs &amp; data</span>
+          </div>
+          <div>
+            <strong>MCA</strong>
+            <span>Marwadi University</span>
+          </div>
+        </div>
+      </section>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
+      <section class="section work-section" id="work">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="section-kicker">Selected work</p>
+              <h2>Production work, explained clearly.</h2>
+            </div>
+            <p>
+              A look at the products I’m helping build and the engineering responsibilities I own
+              across the stack.
+            </p>
+          </div>
+
+          <div class="project-list">
+            <article class="project-card project-blue reveal">
+              <div class="project-topline">
+                <span class="project-number">01</span>
+                <span class="project-visibility">Internal platform</span>
+              </div>
+
+              <div class="project-content">
+                <div>
+                  <p class="project-type">DevOps help desk &amp; ticketing</p>
+                  <h3>Cloud Support Platform</h3>
+                  <p class="project-summary">
+                    A secure support platform connecting AWS clients with DevOps engineers, from
+                    ticket creation and assignment through resolution and closure.
+                  </p>
+                </div>
+
+                <ul class="project-contributions">
+                  <li>Built authentication and protected access to user and ticket data.</li>
+                  <li>Developed time-limited AWS access without sharing client credentials.</li>
+                  <li>Created React interfaces and NestJS APIs for the ticket lifecycle.</li>
+                  <li>Designed PostgreSQL schemas for users, tickets, and access sessions.</li>
+                </ul>
+              </div>
+
+              <div class="tag-list" aria-label="Cloud support platform technologies">
+                <span>React.js</span>
+                <span>NestJS</span>
+                <span>PostgreSQL</span>
+                <span>Sequelize</span>
+                <span>AWS IAM</span>
+              </div>
+            </article>
+
+            <article class="project-card project-teal reveal">
+              <div class="project-topline">
+                <span class="project-number">02</span>
+                <span class="project-visibility">CRM platform</span>
+              </div>
+
+              <div class="project-content">
+                <div>
+                  <p class="project-type">Customer relationship management</p>
+                  <h3>Enterprise CRM</h3>
+                  <p class="project-summary">
+                    A production CRM web application supporting customer data management and
+                    connected workflow modules for day-to-day business operations.
+                  </p>
+                </div>
+
+                <ul class="project-contributions">
+                  <li>Built reusable React components for customer and workflow features.</li>
+                  <li>Implemented Node.js and Express APIs for core CRM workflows.</li>
+                  <li>Modeled relational data and optimized PostgreSQL queries.</li>
+                  <li>Integrated internal and third-party APIs across CRM modules.</li>
+                </ul>
+              </div>
+
+              <div class="tag-list" aria-label="Enterprise CRM platform technologies">
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>PostgreSQL</span>
+                <span>Sequelize</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="experience">
+        <div class="container experience-layout">
+          <div class="section-heading section-heading-sticky reveal">
+            <div>
+              <p class="section-kicker">Experience</p>
+              <h2>Learning fast. Shipping thoughtfully.</h2>
+            </div>
+            <p>
+              My experience spans production product development, secure backend workflows, and
+              collaborative delivery in cross-functional teams.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-meta">
+                <span>Jan 2025 — Present</span>
+                <span>Ahmedabad, Gujarat</span>
+              </div>
+              <h3>Software Developer</h3>
+              <p class="company">eSparkBiz Technologies Pvt. Ltd.</p>
+              <p class="timeline-summary">
+                Developing full stack product features for a cloud support platform and an enterprise CRM platform, with
+                responsibilities spanning reusable interfaces, REST APIs, authentication, database
+                design, integrations, and code review.
+              </p>
+              <div class="role-highlights">
+                <span>Product development</span>
+                <span>API architecture</span>
+                <span>Database design</span>
+                <span>Agile delivery</span>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-meta">
+                <span>Apr 2023 — Jul 2023</span>
+                <span>Rajkot, Gujarat</span>
+              </div>
+              <h3>Python Intern</h3>
+              <p class="company">Heliconia Solution Pvt. Ltd.</p>
+              <p class="timeline-summary">
+                Worked with the Python-based Odoo ERP ecosystem, learned how business modules and
+                workflows are structured, and completed internal tooling tasks with Git-based team
+                practices.
+              </p>
+              <div class="role-highlights">
+                <span>Python</span>
+                <span>Odoo ERP</span>
+                <span>Git workflows</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="section-kicker">Technical toolkit</p>
+              <h2>The tools I use to move from idea to production.</h2>
+            </div>
+            <p>
+              A practical stack centered on modern JavaScript, typed backend development, relational
+              data, and maintainable product delivery.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card skill-card-large reveal" tabindex="0">
+              <span class="skill-index">01</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m16 18 6-6-6-6M8 6l-6 6 6 6M14.5 4l-5 16"></path>
+              </svg>
+              <h3>Frontend engineering</h3>
+              <span class="skill-card-hint" aria-hidden="true">Hover to view stack</span>
+              <div class="skill-card-details">
+                <p>Responsive interfaces, reusable components, and clear interaction patterns.</p>
+                <div class="tag-list">
+                  <span>React.js</span>
+                  <span>JavaScript ES6+</span>
+                  <span>TypeScript</span>
+                  <span>Tailwind CSS</span>
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card reveal" tabindex="0">
+              <span class="skill-index">02</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="6" rx="2"></rect>
+                <rect x="3" y="14" width="18" height="6" rx="2"></rect>
+                <path d="M7 7h.01M7 17h.01"></path>
+              </svg>
+              <h3>Backend &amp; APIs</h3>
+              <span class="skill-card-hint" aria-hidden="true">Hover to view stack</span>
+              <div class="skill-card-details">
+                <p>Secure, structured APIs and business workflows.</p>
+                <div class="tag-list">
+                  <span>Node.js</span>
+                  <span>NestJS</span>
+                  <span>Express.js</span>
+                  <span>REST APIs</span>
+                  <span>Auth</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card reveal" tabindex="0">
+              <span class="skill-index">03</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5v7c0 1.66 4.03 3 9 3s9-1.34 9-3V5M3 12v7c0 1.66 4.03 3 9 3s9-1.34 9-3v-7"></path>
+              </svg>
+              <h3>Data layer</h3>
+              <span class="skill-card-hint" aria-hidden="true">Hover to view stack</span>
+              <div class="skill-card-details">
+                <p>Relational modeling, query design, and reliable persistence.</p>
+                <div class="tag-list">
+                  <span>PostgreSQL</span>
+                  <span>MySQL</span>
+                  <span>Sequelize ORM</span>
+                  <span>Schema design</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card skill-card-wide reveal" tabindex="0">
+              <span class="skill-index">04</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06-2.83 2.83-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21h-4v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06-2.83-2.83.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3v-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06 2.83-2.83.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3h4v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06 2.83 2.83-.06.06A1.65 1.65 0 0 0 19.4 9c.12.6.64 1.03 1.25 1.04H21v4h-.09A1.65 1.65 0 0 0 19.4 15Z"></path>
+              </svg>
+              <h3>Delivery &amp; AI-assisted development</h3>
+              <span class="skill-card-hint" aria-hidden="true">Hover to view stack</span>
+              <div class="skill-card-details">
+                <p>
+                  Iterative delivery with code review, version control, and modern AI tooling used as
+                  an engineering accelerator—not a substitute for judgment.
+                </p>
+                <div class="tag-list">
+                  <span>Git &amp; GitHub</span>
+                  <span>Agile</span>
+                  <span>Code reviews</span>
+                  <span>OpenAI Codex</span>
+                  <span>Claude Code</span>
+                  <span>Agent workflows</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education-section" id="education">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="section-kicker">Foundations</p>
+              <h2>Education &amp; continued learning.</h2>
+            </div>
+            <p>
+              Formal computer application studies, strengthened by focused learning across Node.js,
+              Express, and AWS.
+            </p>
+          </div>
+
+          <div class="education-layout">
+            <div class="education-list">
+              <article class="education-card reveal">
+                <div class="education-year">2023 — 2025</div>
+                <div>
+                  <h3>Master of Computer Application</h3>
+                  <p>Marwadi University</p>
+                  <span>CGPA 8.67</span>
+                </div>
+              </article>
+              <article class="education-card reveal">
+                <div class="education-year">2020 — 2023</div>
+                <div>
+                  <h3>Bachelor of Computer Application</h3>
+                  <p>Atmiya University</p>
+                  <span>CGPA 9.18</span>
+                </div>
+              </article>
+            </div>
+
+            <aside class="certifications-card reveal">
+              <p class="section-kicker">Certifications</p>
+              <ul>
+                <li>
+                  <span>Node.js Certification</span>
+                  <small>Infosys Springboard</small>
+                </li>
+                <li>
+                  <span>Express.js Essential Training</span>
+                  <small>Infosys Springboard</small>
+                </li>
+                <li>
+                  <span>Amazon Web Services (AWS)</span>
+                  <small>Infosys Springboard · 2022</small>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="contact-card reveal">
+            <div class="contact-copy">
+              <p class="section-kicker">Start a conversation</p>
+              <h2>Have a product challenge worth solving?</h2>
+              <p>
+                I’m always open to thoughtful conversations about full stack engineering, product
+                development, and interesting technical problems.
+              </p>
+              <a
+                class="button button-contact"
+                href="mailto:bhogayataparth@gmail.com?subject=Portfolio%20inquiry"
+              >
+                bhogayataparth@gmail.com
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M14 7l5 5-5 5"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="contact-details">
+              <div>
+                <span>Based in</span>
+                <strong>Ahmedabad, Gujarat, India</strong>
+              </div>
+              <div>
+                <span>Find me online</span>
+                <p>
+                  <a href="https://github.com/parthbhogayata" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href="https://www.linkedin.com/in/parth--bhogayata" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </p>
+              </div>
+              <div>
+                <span>Languages</span>
+                <strong>English · Hindi · Gujarati</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="#home" aria-label="Back to top">
+          <span class="brand-mark" aria-hidden="true">PB</span>
+          <span class="brand-copy">
+            <strong>Parth Bhogayata</strong>
+            <small>Built with care, not a template.</small>
+          </span>
+        </a>
+        <p>© <span id="current-year">2026</span> Parth Bhogayata. All rights reserved.</p>
+      </div>
+    </footer>
+
     <script src="Script.js"></script>
   </body>
 </html>
